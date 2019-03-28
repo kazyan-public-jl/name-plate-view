@@ -1,0 +1,76 @@
+body {
+    margin: 0 8px;
+}
+
+/* A4一枚に収まるサイズ */
+.name-plate-view-wrapper {
+    page-break-before: always;
+    top:0 !IMPORTANT;
+    left:0 !IMPORTANT;
+    width:297mm !IMPORTANT;
+    height:210mm !IMPORTANT;
+}
+
+/* 印刷時の設定 */
+@media print{
+    .no-print-area {
+        display: none;
+    }
+    @page {
+        size: A4 landscape;
+    }
+}
+
+.name-plate-view-wrapper .name-plate-view {
+    display: block;
+    width: 100%;
+    height: 30%;
+    position: relative;
+    border-top: #aaa dotted 2px;
+    border-bottom: #aaa dotted 2px;
+}
+.name-plate-view-wrapper .name-plate-view.blank {
+    height: 20%;
+    border: none;
+}
+
+.name-plate-view-wrapper .name-plate-view.reverse {
+    transform: rotate(180deg);
+    border-top: none;
+}
+
+.name-plate-view-wrapper .name-plate-view .user-image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 30px;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+}
+.name-plate-view-wrapper .name-plate-view .user-name{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    height: 80px;
+    line-height: 80px;
+    padding: 5px 10px;
+    z-index: 10;
+    font-size: 5em;
+    /* background-color: #ccc; */
+}
+.name-plate-view-wrapper .name-plate-view .user-role{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 25px;
+    line-height: 25px;
+    padding: 5px 10px;
+    z-index: 10;
+    font-size: 1.3em;
+    -webkit-print-color-adjust: exact;
+    background-color: #ddd!important;
+}
+
+

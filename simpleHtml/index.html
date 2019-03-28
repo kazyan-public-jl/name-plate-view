@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>FrontendEnv Sample</title>
+        <link rel="stylesheet" href="NamePlateView.css">
+    </head>
+    <body>
+        <style>
+
+        </style>
+        <div class="no-print-area">
+            <div id="NameList">
+                <h2>名前一覧を入力</h2>
+                <p>
+                    例： 使命,所属,画像URL<br>
+                    サイゲ 太朗,プロデューサー,https://ca.slack-edge.com/THB8NKEHW-UHB8NKH3J-41e4fb2712c3-72<br>
+                    バージョン 華子,バージョンアップ委員会,https://ca.slack-edge.com/THB8NKEHW-USLACKBOT-sv41d8cd98f0-72
+                </p>
+                <p>
+                    <textarea name="UserList" id="UserList" cols="150" rows="15" placeholder="氏名,所属を入力してください">
+サイゲ 太朗,プロデューサー,https://ca.slack-edge.com/THB8NKEHW-UHB8NKH3J-41e4fb2712c3-72    
+バージョン 華子,バージョンアップ委員会,https://ca.slack-edge.com/THB8NKEHW-USLACKBOT-sv41d8cd98f0-72</textarea>
+                </p>
+            </div>
+            <div id="RenderNamePlates">
+                <input type="button" value="名札を表示する" onClick="showNamePlateView()" accesskey="a" />
+                <div class="renderArea"></div>
+            </div>
+            
+        </div>
+        <div id="RenderLayoutsArea"></div>
+    </body>
+    <script src="./NamePlateView.js"></script>
+</html>
