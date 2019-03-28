@@ -76,8 +76,8 @@ function generateNamePlateData() {
         }
     }
     console.log("userList:", userList);
-    // return userList;
 
+    // userListの中身を確認出力する
     if (userList.length > 0) {
         const renderAreaElement = document.getElementsByClassName('renderArea')[0];
         if (renderAreaElement == null) {
@@ -85,8 +85,9 @@ function generateNamePlateData() {
         }
         // 確認用出力
         let userListOutputText = JSON.stringify(userList);
-        userListOutputText = userListOutputText.replace(/},{/,'},<br>{');
-        renderAreaElement.innerHTML = userListOutputText;
+        userListOutputText = userListOutputText.replace(/},{/g,'},<br>{');
+        const userListCountText = "参加者: " + String(userList.length) + "人<br>";
+        renderAreaElement.innerHTML = userListCountText + userListOutputText;
 
         return userList;
     }

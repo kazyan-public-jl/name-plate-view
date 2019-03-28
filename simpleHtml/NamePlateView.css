@@ -2,6 +2,23 @@ body {
     margin: 0 8px;
 }
 
+#NameList .text-sample-area {
+    display: block;
+    width: 200px;
+    border: black solid 1px;
+    padding: 5px;
+}
+
+#NameList .box-flex {
+    display: flex;
+}
+#NameList .box-flex > div {
+    margin-left: 20px;
+}
+#NameList .box-flex > div:first-child {
+    margin-left: 0;
+}
+
 /* A4一枚に収まるサイズ */
 .name-plate-view-wrapper {
     page-break-before: always;
